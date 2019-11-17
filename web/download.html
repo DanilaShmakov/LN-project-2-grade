@@ -42,7 +42,67 @@
         </div>
     </div>
     <div class="container">
-        <!-- Текст здесь -->
+        
+    <h2>Инструкция для запуска c-lightning на Ubuntu</h2>
+
+
+Установка bitcoind для работы с c-lightning:
+
+sudo apt-get install build-essential
+sudo apt-get remove build-essential
+sudo apt-get install build-essential
+sudo apt-get install libtool autotools-dev autoconf
+sudo apt-get install libssl-dev
+sudo apt-get install libboost-all-dev
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install bitcoind
+mkdir ~/.bitcoin/ && cd ~/.bitcoin/
+nano bitcoind.conf
+
+Записываем в файл bitcoind.conf:
+
+rpcuser=username
+rpcpassword=password
+testnet=0
+rpcport=8332
+rpcallowip=127.0.0.1
+rpcallowip=195.154.11.93
+server=1
+prune=550
+
+
+Запуск демона: bitcoind -daemon
+Остановка: bitcoin-cli stop
+Вывод информации: bitcoin-cli getblockchaininfo
+
+
+После того, как все блоки скачаются можно устанавливать c-lightning:
+
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -u ppa:lightningnetwork/ppa
+sudo apt-get install lightningd
+
+
+Далее один раз вводим следующие команды для нормального создания папки:
+
+lightningd --network=bitcoin --log-level=debug
+нажимаем ctrl+z и убиваем процесс lightningd
+nano ~/.lightning/config
+
+Записываем в файл config:
+
+network=bitcoin
+log-level=debug
+addr=0.0.0.0:9735
+bitcoin-rpcuser=username_as_bitcoin_rpc
+bitcoin-rpcpassword=password_as_bitcoin_rpc
+
+
+После этого мы можем:
+включить ноду: lightningd --daemon
+вывести информацию о ней: lightning-cli getinfo
+выключить ноду: lightning-cli getinfo
     </div>
     <footer class="footer fixed-bottom py-3 bg-dark text-white-50">
         <div class="container text-center">
