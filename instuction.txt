@@ -59,5 +59,12 @@ bitcoin-rpcpassword=password_as_bitcoin_rpc
 вывести информацию о ней: lightning-cli getinfo
 выключить ноду: lightning-cli getinfo
 
+Для переводов нужен канал. Чтобы его создать нужно сделать следующее:
+1) Подключиться к другому узлу для синхронизации графа канала
+2) Сгенерировать адрес и отправить на него есколько биткойнов. Используйте $ lightning-cli listfunds для проверки
+3) Открыть канал
 
-
+Соответствующие команды:
+1) lightning-cli connect < node_id >  < ip > [ < port > ]
+2) lightning-cli newaddr p2sh-segwit
+3) lightning-cli fundchannel < node_id >  < amount_in_satoshis >
