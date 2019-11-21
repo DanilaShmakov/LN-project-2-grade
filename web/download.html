@@ -47,69 +47,69 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <p>Установка bitcoind для работы с c-lightning:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">sudo apt-get install build-essential</li>
-                        <li class="list-group-item">sudo apt-get remove build-essential</li>
-                        <li class="list-group-item">sudo apt-get install build-essential</li>
-                        <li class="list-group-item">sudo apt-get install libtool autotools-dev autoconf</li>
-                        <li class="list-group-item">sudo apt-get install libssl-dev</li>
-                        <li class="list-group-item">sudo apt-get install libboost-all-dev</li>
-                        <li class="list-group-item">sudo add-apt-repository ppa:bitcoin/bitcoin</li>
-                        <li class="list-group-item">sudo apt-get update</li>
-                        <li class="list-group-item">sudo apt-get install bitcoind</li>
-                        <li class="list-group-item">mkdir ~/.bitcoin/ && cd ~/.bitcoin/</li>
-                        <li class="list-group-item">nano(vim) bitcoind.conf</li>
+                    <ul class="list-unstyled">
+                        <li class="pl-4"><b>$</b> sudo apt-get install build-essential</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get remove build-essential</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get install build-essential</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get install libtool autotools-dev autoconf</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get install libssl-dev</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get install libboost-all-dev</li>
+                        <li class="pl-4"><b>$</b> sudo add-apt-repository ppa:bitcoin/bitcoin</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get update</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get install bitcoind</li>
+                        <li class="pl-4"><b>$</b> mkdir ~/.bitcoin/ && cd ~/.bitcoin/</li>
+                        <li class="pl-4"><b>$</b> nano(vim) bitcoind.conf</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
                     <p>Записываем в файл bitcoind.conf:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">rpcuser=username</li>
-                        <li class="list-group-item">rpcpassword=password</li>
-                        <li class="list-group-item">testnet=0</li>
-                        <li class="list-group-item">rpcport=8332</li>
-                        <li class="list-group-item">rpcallowip=127.0.0.1</li>
-                        <li class="list-group-item">rpcallowip=195.154.11.93</li>
-                        <li class="list-group-item">server=1</li>
-                        <li class="list-group-item">prune=550</li>
+                    <ul class="list-unstyled">
+                        <li class="pl-4">rpcuser=username</li>
+                        <li class="pl-4">rpcpassword=password</li>
+                        <li class="pl-4">testnet=0</li>
+                        <li class="pl-4">rpcport=8332</li>
+                        <li class="pl-4">rpcallowip=127.0.0.1</li>
+                        <li class="pl-4">rpcallowip=195.154.11.93</li>
+                        <li class="pl-4">server=1</li>
+                        <li class="pl-4">prune=550</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
                     <p>После того, как все блоки скачаются можно устанавливать c-lightning:
                     </p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">sudo apt-get install -y software-properties-common</li>
-                        <li class="list-group-item">sudo add-apt-repository -u ppa:lightningnetwork/ppa</li>
-                        <li class="list-group-item">sudo apt-get install lightningd</li>
+                    <ul class="list-unstyled">
+                        <li class="pl-4"><b>$</b> sudo apt-get install -y software-properties-common</li>
+                        <li class="pl-4"><b>$</b> sudo add-apt-repository -u ppa:lightningnetwork/ppa</li>
+                        <li class="pl-4"><b>$</b> sudo apt-get install lightningd</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
                     <p>Далее один раз вводим следующие команды для нормального создания папки:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">lightningd --network=bitcoin --log-level=debug</li>
-                        <li class="list-group-item">нажимаем ctrl+z и убиваем процесс lightningd</li>
-                        <li class="list-group-item">nano(vim) ~/.lightning/config</li>
+                    <ul class="list-unstyled">
+                        <li class="pl-4"><b>$</b> lightningd --network=bitcoin --log-level=debug</li>
+                        <li class="pl-4">нажимаем ctrl+z и убиваем процесс lightningd</li>
+                        <li class="pl-4"><b>$</b> nano(vim) ~/.lightning/config</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
                     <p>Записываем в файл config:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">network=bitcoin</li>
-                        <li class="list-group-item">log-level=debug</li>
-                        <li class="list-group-item">addr=0.0.0.0:9735</li>
-                        <li class="list-group-item">bitcoin-rpcuser=username_as_bitcoin_rpc</li>
-                        <li class="list-group-item">bitcoin-rpcpassword=password_as_bitcoin_rpc</li>
+                    <ul class="list-unstyled">
+                        <li class="pl-4">network=bitcoin</li>
+                        <li class="pl-4">log-level=debug</li>
+                        <li class="pl-4">addr=0.0.0.0:9735</li>
+                        <li class="pl-4">bitcoin-rpcuser=username_as_bitcoin_rpc</li>
+                        <li class="pl-4">bitcoin-rpcpassword=password_as_bitcoin_rpc</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
                     <p>Полезные команды:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Запуск демона: bitcoind -daemon</li>
-                        <li class="list-group-item">Остановка: bitcoin-cli stop</li>
-                        <li class="list-group-item">Вывод информации: bitcoin-cli getblockchaininfo</li>
-                        <li class="list-group-item">Включить ноду: lightningd --daemon</li>
-                        <li class="list-group-item">Вывести информацию о ней: lightning-cli getinfo</li>
-                        <li class="list-group-item">Выключить ноду: lightning-cli getinfo</li>
+                    <ul class="list-unstyled">
+                        <li class="pl-4">Запуск демона: <b>$</b> bitcoind -daemon</li>
+                        <li class="pl-4">Остановка: <b>$</b> bitcoin-cli stop</li>
+                        <li class="pl-4">Вывод информации: <b>$</b> bitcoin-cli getblockchaininfo</li>
+                        <li class="pl-4">Включить ноду: <b>$</b> lightningd --daemon</li>
+                        <li class="pl-4">Вывести информацию о ней: <b>$</b> lightning-cli getinfo</li>
+                        <li class="pl-4">Выключить ноду: <b>$</b> lightning-cli getinfo</li>
                     </ul>
                 </li>
             </ul>
