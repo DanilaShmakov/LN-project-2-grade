@@ -49,8 +49,6 @@
                     <p>Установка bitcoind для работы с c-lightning:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4"><b>$</b> sudo apt-get install build-essential</li>
-                        <li class="pl-4"><b>$</b> sudo apt-get remove build-essential</li>
-                        <li class="pl-4"><b>$</b> sudo apt-get install build-essential</li>
                         <li class="pl-4"><b>$</b> sudo apt-get install libtool autotools-dev autoconf</li>
                         <li class="pl-4"><b>$</b> sudo apt-get install libssl-dev</li>
                         <li class="pl-4"><b>$</b> sudo apt-get install libboost-all-dev</li>
@@ -102,16 +100,32 @@
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Полезные команды:</p>
+                    <p>Основные команды:</p>
                     <ul class="list-unstyled">
-                        <li class="pl-4">Запуск демона: <b>$</b> bitcoind -daemon</li>
+                        <li class="pl-4">Запуск биткоин узла: <b>$</b> bitcoind -daemon</li>
                         <li class="pl-4">Остановка: <b>$</b> bitcoin-cli stop</li>
                         <li class="pl-4">Вывод информации: <b>$</b> bitcoin-cli getblockchaininfo</li>
-                        <li class="pl-4">Включить ноду: <b>$</b> lightningd --daemon</li>
+                        <li class="pl-4">Включить ЛН ноду: <b>$</b> lightningd --daemon</li>
                         <li class="pl-4">Вывести информацию о ней: <b>$</b> lightning-cli getinfo</li>
-                        <li class="pl-4">Выключить ноду: <b>$</b> lightning-cli getinfo</li>
+                        <li class="pl-4">Выключить ЛН ноду: <b>$</b> lightning-cli getinfo</li>
                     </ul>
                 </li>
+                <li class="list-group-item">
+                    <p>Для переводов нужен канал. Чтобы его создать нужно сделать следующее:
+                        <br>1) Подключиться к другому узлу для синхронизации графа канала
+                        <br>2) Сгенерировать адрес и отправить на него есколько биткойнов. Используйте $ lightning-cli listfunds для проверки
+                        <br>3) Открыть канал
+                        <br>Соответствующие команды:
+                    </p>
+                    <ul class="list-unstyled">
+                    <li class="pl-4">1) lightning-cli connect node_id ip [  port  ]</li>
+                    <li class="pl-4">2) lightning-cli newaddr p2sh-segwit</li>
+                    <li class="pl-4">3) lightning-cli fundchannel node_id amount_in_satoshis </li>
+                    </ul>
+                </li>
+
+
+
             </ul>
         </div>
     </div>
