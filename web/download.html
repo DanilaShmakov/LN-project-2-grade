@@ -46,7 +46,7 @@
             <div class="card-header text-center">Инструкция для запуска C-lightning на Linux</div>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <p>Установка bitcoind для работы с c-lightning:</p>
+                    <p> Для работы с c-lightning нужно установить и запустить bitcoind:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4"><b>$</b> sudo apt-get install build-essential</li>
                         <li class="pl-4"><b>$</b> sudo apt-get install libtool autotools-dev autoconf</li>
@@ -56,7 +56,7 @@
                         <li class="pl-4"><b>$</b> sudo apt-get update</li>
                         <li class="pl-4"><b>$</b> sudo apt-get install bitcoind</li>
                         <li class="pl-4"><b>$</b> mkdir ~/.bitcoin/ && cd ~/.bitcoin/</li>
-                        <li class="pl-4"><b>$</b> nano(vim) bitcoind.conf</li>
+                        <li class="pl-4"><b>$</b> nano bitcoind.conf</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
@@ -71,8 +71,12 @@
                         <li class="pl-4">server=1</li>
                         <li class="pl-4">prune=550</li>
                     </ul>
+                    <p>Последняя строка нужна для запуска в сокращенном виде. Однако из-за неё могут возникнуть конфликты так как 
+                    c-lightning поддерживает работу в этом режиме частично</p>
                 </li>
                 <li class="list-group-item">
+                    <p>Можно запускать биткоин узел. При запуске он будет синхронизироватся с сетью 
+                        скачивая новые блоки и отбрасывая ненужные. У нас это заняло 2 дня и 8 гигабайт места</p>
                     <p>После того, как все блоки скачаются можно устанавливать c-lightning:
                     </p>
                     <ul class="list-unstyled">
@@ -82,11 +86,11 @@
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Далее один раз вводим следующие команды для нормального создания папки:</p>
+                    <p>Далее один раз вводим следующие команды для правильного создания папки .lightning в домашней директории:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4"><b>$</b> lightningd --network=bitcoin --log-level=debug</li>
                         <li class="pl-4">нажимаем ctrl+z и убиваем процесс lightningd</li>
-                        <li class="pl-4"><b>$</b> nano(vim) ~/.lightning/config</li>
+                        <li class="pl-4"><b>$</b> nano ~/.lightning/config</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
@@ -100,27 +104,28 @@
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Основные команды:</p>
+                    <p>После того как всё скачается, для запуска и проверки состояния lightningd и bitcoind используются следующие команды:</p>
                     <ul class="list-unstyled">
-                        <li class="pl-4">Запуск биткоин узла: <b>$</b> bitcoind -daemon</li>
-                        <li class="pl-4">Остановка: <b>$</b> bitcoin-cli stop</li>
-                        <li class="pl-4">Вывод информации: <b>$</b> bitcoin-cli getblockchaininfo</li>
+                        <li class="pl-4">Запустить биткоин узел: <b>$</b> bitcoind -daemon</li>
+                        <li class="pl-4">Выключить биткоин узел: <b>$</b> bitcoin-cli stop</li>
+                        <li class="pl-4">Вывод информации о биткоин узле: <b>$</b> bitcoin-cli getblockchaininfo</li>
                         <li class="pl-4">Включить ЛН ноду: <b>$</b> lightningd --daemon</li>
                         <li class="pl-4">Вывести информацию о ней: <b>$</b> lightning-cli getinfo</li>
                         <li class="pl-4">Выключить ЛН ноду: <b>$</b> lightning-cli getinfo</li>
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Для переводов нужен канал. Чтобы его создать нужно сделать следующее:
+                    <p>Вот мы и установили всё необходимое, однако мы не сможем принимать и отправлять средства без канала. 
+                        Чтобы его создать нужно сделать следующее:
                         <br>1) Подключиться к другому узлу для синхронизации графа канала
-                        <br>2) Сгенерировать адрес и отправить на него есколько биткойнов. Используйте $ lightning-cli listfunds для проверки
+                        <br>2) Сгенерировать адрес и отправить на него несколько биткойнов. Используйте $ lightning-cli listfunds для проверки
                         <br>3) Открыть канал
                         <br>Соответствующие команды:
                     </p>
                     <ul class="list-unstyled">
-                    <li class="pl-4">1) lightning-cli connect node_id ip [  port  ]</li>
-                    <li class="pl-4">2) lightning-cli newaddr p2sh-segwit</li>
-                    <li class="pl-4">3) lightning-cli fundchannel node_id amount_in_satoshis </li>
+                    <li class="pl-4">1) <b>$</b> lightning-cli connect node_id@ip:port</li>
+                    <li class="pl-4">2) <b>$</b> lightning-cli newaddr p2sh-segwit</li>
+                    <li class="pl-4">3) <b>$</b> lightning-cli fundchannel node_id amount_in_satoshis </li>
                     </ul>
                 </li>
 
