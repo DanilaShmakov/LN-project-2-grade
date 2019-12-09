@@ -123,21 +123,17 @@
                         <li class="pl-4">Включить ЛН ноду: <b>$ lightningd --daemon</b></li>
                         <li class="pl-4">Вывести информацию о ней: <b>$ lightning-cli getinfo</b></li>
                         <li class="pl-4">Выключить ЛН ноду: <b>$ lightning-cli getinfo</b></li>
-                        сюда засунуть фотки source/start.png source/getinfo.png source/getblockchaininfo
-                        <div class="card-group" >
+                        <div class="card-group">
                             <div class="card">
                                 <img src="source/start.png" alt="" class="card-img" style='height:200px'>
                             </div>
-                            <div class="card" >
-                                <img src="source/getinfo.png" alt="" class="card-img" style='height:200px' >
+                            <div class="card">
+                                <img src="source/getinfo.png" alt="" class="card-img" style='height:200px'>
                             </div>
-                            <div class="card" >
+                            <div class="card">
                                 <img src="source/getblockchaininfo.png" alt="" class="card-img" style='height:200px'>
                             </div>
                         </div>
-
-
-                        
                         <p>Так же пригодится команда <b>$ lightning-cli help</b> и <b>$ lightning-cli help "command"</b>
                             для того чтобы узнать для чего нужны те или иные команды </p>
                     </ul>
@@ -152,7 +148,6 @@
                             lightning-cli listfunds.</b> для проверки. source/20K_come.png
                         <br>3) Открыть канал с узлом, к которому вы подключились в первом шаге.</p>
                     <p>Соответствующие команды:
-
                         <ul class="list-unstyled">
                             <li class="pl-4">1) <b>$ lightning-cli connect "node_id@ip:port"</b> </li>
                             <li class="pl-4">2) <b>$ lightning-cli newaddr p2sh-segwit</b></li>
@@ -167,7 +162,6 @@
                         Должно быть так, что state: CHANNELD_NORMAL, public: true. Если всё получилось,
                         то теперь к ноде можно подключаться с мобильных кошельков и создавать с ней канал.
                     </p>
-
                 <li class="list-group-item">
                     <p>Для того, чтобы сделать перевод, нужно ввести команду:
                         <ul class="list-unstyled">
@@ -175,8 +169,11 @@
                     </p>
                     <p>Если платёж не дошёл используйте <b>$ lightning-cli paystatus "invoice"</b> чтобы понять в чём
                         ошибка </p>
-
-                <li>сюда скрин вывода после source/pay_complete</li>
+                <li>
+                    <div class="card">
+                        <img src="source/pay_complete.png" alt="" class="card-img">
+                    </div>
+                </li>
             </ul>
             </li>
             <li class="list-group-item">
@@ -189,7 +186,6 @@
                     (0.001 сатоши)
                 </p>
             </li>
-
             <li class="list-group-item">
                 <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту команду:
                     <ul class="list-unstyled">
@@ -200,7 +196,6 @@
                     (0.001 сатоши)
                 </p>
             </li>
-
             </ul>
         </div>
     </div>
