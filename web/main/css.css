@@ -46,3 +46,19 @@
     background-color: #fff;
     margin-left: 10px;
 }
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 1.5%;
+}
+
+.card{
+    position: relative;
+    background: #fefff9;
+    color: #363636;
+    box-shadow: rgba(0, 0, 0,0.19) 0 0 8px 0;
+    border-radius: 4px;
+}
