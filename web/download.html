@@ -45,14 +45,15 @@
         <div class="card">
             <div class="card-header text-center">Инструкция для запуска и работы C-lightning на Linux</div>
             <ul class="list-group">
-		<li class="list-group-item">
-        <p>Работа ноды на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН, 
-            так как потраченные силы не будут стоить результата. Гораздо легче пользоваться мобильным
-            приложением, некоторые из которых мы тоже рассмотрим.
-        Но если вы знаете зачем вам это нужно, то специально для вас 
-        наша команда решила разобраться в этом деле и установить одну из популярных реализаций ЛН ноды "C-lightning".</p>
-        </li>
-		<li class="list-group-item">
+                <li class="list-group-item">
+                    <p>Работа ноды на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН,
+                        так как потраченные силы не будут стоить результата. Гораздо легче пользоваться мобильным
+                        приложением, некоторые из которых мы тоже рассмотрим.
+                        Но если вы знаете зачем вам это нужно, то специально для вас
+                        наша команда решила разобраться в этом деле и установить одну из популярных реализаций ЛН ноды
+                        "C-lightning".</p>
+                </li>
+                <li class="list-group-item">
                     <p> Для работы с c-lightning нужно установить и запустить bitcoind:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4"><b>$ sudo apt-get install build-essential</b></li>
@@ -78,11 +79,12 @@
                         <li class="pl-4">server=1</li>
                         <li class="pl-4">prune=550</li>
                     </ul>
-                    <p>Последняя строка нужна для запуска в сокращенном виде. Однако из-за неё могут возникнуть конфликты так как 
-                    c-lightning поддерживает работу в этом режиме частично</p>
+                    <p>Последняя строка нужна для запуска в сокращенном виде. Однако из-за неё могут возникнуть
+                        конфликты так как
+                        c-lightning поддерживает работу в этом режиме частично</p>
                 </li>
                 <li class="list-group-item">
-                    <p>Можно запускать биткоин узел. При запуске он будет синхронизироватся с сетью 
+                    <p>Можно запускать биткоин узел. При запуске он будет синхронизироватся с сетью
                         скачивая новые блоки и отбрасывая ненужные. У нас это заняло 2 дня и 8 гигабайт места</p>
                     <p>После того, как все блоки скачаются можно устанавливать c-lightning:
                     </p>
@@ -93,7 +95,8 @@
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Далее один раз вводим следующие команды для правильного создания папки .lightning в домашней директории:</p>
+                    <p>Далее один раз вводим следующие команды для правильного создания папки .lightning в домашней
+                        директории:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4"><b>$ lightningd --network=bitcoin --log-level=debug</b></li>
                         <li class="pl-4">нажимаем ctrl+z и убиваем процесс lightningd</li>
@@ -111,7 +114,8 @@
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>После того как всё скачается, для запуска и проверки состояния lightningd и bitcoind используются следующие команды:</p>
+                    <p>После того как всё скачается, для запуска и проверки состояния lightningd и bitcoind используются
+                        следующие команды:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4">Запустить биткоин узел: <b>$ bitcoind -daemon</b></li>
                         <li class="pl-4">Выключить биткоин узел: <b>$ bitcoin-cli stop</b></li>
@@ -119,61 +123,83 @@
                         <li class="pl-4">Включить ЛН ноду: <b>$ lightningd --daemon</b></li>
                         <li class="pl-4">Вывести информацию о ней: <b>$ lightning-cli getinfo</b></li>
                         <li class="pl-4">Выключить ЛН ноду: <b>$ lightning-cli getinfo</b></li>
-            сюда засунуть фотки source/start.png  source/getinfo.png source/getblockchaininfo
-            
-		    <p>Так же пригодится команда <b>$ lightning-cli help</b> и <b>$ lightning-cli help "command"</b> для того чтобы узнать для чего нужны те или иные команды </p>
+                        сюда засунуть фотки source/start.png source/getinfo.png source/getblockchaininfo
+                        <div class="card-group" >
+                            <div class="card">
+                                <img src="source/start.png" alt="" class="card-img" style='height:250px'>
+                            </div>
+                            <div class="card" >
+                                <img src="source/getinfo.png" alt="" class="card-img" style='height:250px' >
+                            </div>
+                            <div class="card" >
+                                <img src="source/getblockchaininfo.png" alt="" class="card-img" style='height:250px'>
+                            </div>
+                        </div>
+
+
+                        
+                        <p>Так же пригодится команда <b>$ lightning-cli help</b> и <b>$ lightning-cli help "command"</b>
+                            для того чтобы узнать для чего нужны те или иные команды </p>
                     </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Вот мы и установили всё необходимое, однако не получится принимать и отправлять LN bitcoin без канала. 
+                    <p>Вот мы и установили всё необходимое, однако не получится принимать и отправлять LN bitcoin без
+                        канала.
                         Чтобы его создать нужно сделать следующее:
-                        <br>1) Подключиться к другому узлу для синхронизации графа канала. Их можно найти на <a href="https://1ml.com/">1ML</a>.
-                        <br>2) Сгенерировать адрес и отправить на него несколько биткойнов. Используйте <b>$ lightning-cli listfunds.</b> для проверки. source/20K_come.png
+                        <br>1) Подключиться к другому узлу для синхронизации графа канала. Их можно найти на <a
+                            href="https://1ml.com/">1ML</a>.
+                        <br>2) Сгенерировать адрес и отправить на него несколько биткойнов. Используйте <b>$
+                            lightning-cli listfunds.</b> для проверки. source/20K_come.png
                         <br>3) Открыть канал с узлом, к которому вы подключились в первом шаге.</p>
-                        <p>Соответствующие команды:
-                    
-                    <ul class="list-unstyled">
-                    <li class="pl-4">1) <b>$ lightning-cli connect "node_id@ip:port"</b> </li>
-                    <li class="pl-4">2) <b>$ lightning-cli newaddr p2sh-segwit</b></li>
-                    <li class="pl-4">3) <b>$ lightning-cli fundchannel "node_id" "amount_in_satoshis"</b> </li>
-                    </ul></p>
-		    <p>Чтобы проверить состояние канала используйте команды:
-		    <ul class="list-unstyled">
-                    <li class="pl-4"> <b>$ lightning-cli listpeers</b></li>
-                    <li class="pl-4"> <b>$ lightning-cli listchannels "short-id"</b></li>
-                    </ul>
+                    <p>Соответствующие команды:
+
+                        <ul class="list-unstyled">
+                            <li class="pl-4">1) <b>$ lightning-cli connect "node_id@ip:port"</b> </li>
+                            <li class="pl-4">2) <b>$ lightning-cli newaddr p2sh-segwit</b></li>
+                            <li class="pl-4">3) <b>$ lightning-cli fundchannel "node_id" "amount_in_satoshis"</b> </li>
+                        </ul>
+                    </p>
+                    <p>Чтобы проверить состояние канала используйте команды:
+                        <ul class="list-unstyled">
+                            <li class="pl-4"> <b>$ lightning-cli listpeers</b></li>
+                            <li class="pl-4"> <b>$ lightning-cli listchannels "short-id"</b></li>
+                        </ul>
                         Должно быть так, что state: CHANNELD_NORMAL, public: true. Если всё получилось,
                         то теперь к ноде можно подключаться с мобильных кошельков и создавать с ней канал.
                     </p>
-                
- 		<li class="list-group-item">
-		    <p>Для того, чтобы сделать перевод, нужно ввести команду:
-		    <ul class="list-unstyled">
-                <li class="pl-4"> <b>$ lightning-cli pay "invoice"</b> </li></p>
-                <p>Если платёж не дошёл используйте <b>$ lightning-cli paystatus "invoice"</b> чтобы понять в чём ошибка  </p>
-                
+
+                <li class="list-group-item">
+                    <p>Для того, чтобы сделать перевод, нужно ввести команду:
+                        <ul class="list-unstyled">
+                            <li class="pl-4"> <b>$ lightning-cli pay "invoice"</b> </li>
+                    </p>
+                    <p>Если платёж не дошёл используйте <b>$ lightning-cli paystatus "invoice"</b> чтобы понять в чём
+                        ошибка </p>
+
                 <li>сюда скрин вывода после source/pay_complete</li>
-		    </ul>	
-		</li>
-		<li class="list-group-item">
-		    <p>Для того, чтобы принять перевод, нужно ввести команду:
-		    <ul class="list-unstyled">
-                <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>
-			    <li class="pl-4">сюда скрин вывода после invoice</li>
-		    </ul> 
-                Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши (0.001 сатоши)
-            </p>	
-		</li>
-        
-        <li class="list-group-item">
-		    <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту команду:
-		    <ul class="list-unstyled">
-                <li class="pl-4"> <b>$ lightning-cli close "node_id"</b> </li>
-			    <li class="pl-4">сюда скрин </li>
-		    </ul> 
-                Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши (0.001 сатоши)
-            </p>	
-		</li>
+            </ul>
+            </li>
+            <li class="list-group-item">
+                <p>Для того, чтобы принять перевод, нужно ввести команду:
+                    <ul class="list-unstyled">
+                        <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>
+                        <li class="pl-4">сюда скрин вывода после invoice</li>
+                    </ul>
+                    Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши
+                    (0.001 сатоши)
+                </p>
+            </li>
+
+            <li class="list-group-item">
+                <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту команду:
+                    <ul class="list-unstyled">
+                        <li class="pl-4"> <b>$ lightning-cli close "node_id"</b> </li>
+                        <li class="pl-4">сюда скрин </li>
+                    </ul>
+                    Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши
+                    (0.001 сатоши)
+                </p>
+            </li>
 
             </ul>
         </div>
