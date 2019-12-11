@@ -25,13 +25,18 @@
                     <a href="index.html" class="nav-link">Домой</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">Об LN</a>
+                    <a href="about.html" class="nav-link active">Об LN</a>
                 </li>
                 <li class="nav-item">
                     <a href="download.html" class="nav-link">Установка ноды</a>
                 </li>
-                <li class="nav-item">
-                    <a href="apps.html" class="nav-link">Обзор приложений</a>
+                <li class="nav-item dropdown">
+                    <a href="apps.html" class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Обзор приложений</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown">
+                        <a class="dropdown-item" href="apps.html">Eclair Mobile</a>
+                        <a class="dropdown-item" href="applications.html">Blue Wallet</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -42,7 +47,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="card">
+        <div class="card mb-3">
             <div class="card-header text-center">Понятие LN (своими словами)</div>
             <div class="card-body">
                 <p>Lightning Network — протокол платежей второго (канального) уровня, работающий с блокчейном. Принцип его работы
@@ -56,6 +61,12 @@
                     данных в блокчейне до 1 мб), т.к. в сам блокчейн записывает только сведения о запуске средств по
                     каналу и
                     баланс после закрытия этого канала, а не вся история переводов.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header text-center">Отличия LN от других оплат</div>
+            <div class="card-body">
+                <p></p>
             </div>
         </div>
         <br><br>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Установка
+        Eclair Mobile
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,35 +30,40 @@
                 <li class="nav-item">
                     <a href="download.html" class="nav-link">Установка ноды</a>
                 </li>
-                <li class="nav-item">
-                    <a href="apps.html" class="nav-link">Обзор приложений</a>
+                <li class="nav-item dropdown">
+                    <a href="apps.html" class="nav-link dropdown-toggle active" id="dropdown" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Обзор приложений</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown">
+                        <a class="dropdown-item" href="apps.html">Eclair Mobile</a>
+                        <a class="dropdown-item" href="applications.html">Blue Wallet</a>
+                    </div>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="jumbotron">
         <div class="container text-light">
-            <h1>Обзор приложений</h1>
+            <h1>Обзор Eclair Mobile</h1>
         </div>
     </div>
     <div class="container mb-5">
         <div class="card">
-            <div class="card-header text-center" style="font-size: 30px;">Обзор кошелька Eclair Wallet</div>
+            <div class="card-header text-center" style="font-size: 30px;">Обзор кошелька Eclair Mobile</div>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <div class="row justigy-content-between">
-                        <div class="col-8">
-                            <h1 id="app_load"> Установка приложения</h1>
+                    <div class="row justify-content-between">
+                        <div class="col-9">
+                            <h1 id="app_load"> Установка кошелька</h1>
                         </div>
-                        <div class="col-4 text-right">
+                        <div class="col-3 text-right">
                             <img src="source/eclair/icon.png" style="width: 10%; min-width: 60px; padding: 10px; border: 2px solid darkviolet; 
                                         border-radius: 50%;">
                         </div>
                     </div>
 
-                    <p> Установки приложения «Eclair Wallet» доступно для мобильных телефонов на базе Андроид.
-                        приложение доступно бесплатно в официальном магазине «GooglePlay». Приложение с лёгкостью
-                        находится после ввода в поиске «Eclair». Иконка представляет собой трехцветную молнию:
+                    <p> Установки кошелька «Eclair Mobile доступно для мобильных телефонов на базе Андроид.
+                        Кошелек бесплатен для скачивания в официальном магазине «GooglePlay». Кошелек легко находится
+                        после ввода в строке поиска «Eclair». Иконка представляет собой трехцветную молнию:
                         тёмно-синяя,
                         синяя и фиолетовая. Размер программы после установки 26 МБ.
                     </p>
@@ -69,61 +74,49 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <h1 id="app_start"> Начало работы</h1>
-                    <p> При первом запуске приложения, предлагается создать новый или восстановить старый кошелек (рис.
+                    <p> При первом запуске кошелька, предлагается создать новый или восстановить старый кошелек (рис.
                         1).
                         После входа в кошелек, происходит переход на главное окно, в котором есть 3 вкладки: «Получить»
                         (рис. 2),
                         «Транзакции» (рис. 3), «Каналы» (рис. 4).
-                        <hr>
                     </p>
+                    <hr>
+                    <p>
+                        При следующих запусках кошелька, будет запрошен шестизначный PIN, который был
+                        установлен при создании кошелька (рис. 5).
+                    </p>
+                    <hr>
                     <div class="card-deck">
                         <div class="card">
                             <img src="source/eclair/screen1.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 1</p>
+                                <div class='  text-center'>Рис 1</div>
                             </div>
                         </div>
                         <div class="card">
                             <img src="source/eclair/screen2.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 2</p>
+                                <div class='  text-center'>Рис 2</div>
                             </div>
                         </div>
                         <div class="card">
                             <img src="source/eclair/screen3.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 3</p>
+                                <div class='  text-center'>Рис 3</div>
                             </div>
                         </div>
-                    
-                    </div>
-                    <p>
-                        <hr>
-                        При следующих запусках приложения, будет запрошен шестизначный PIN, который был
-                        установлен при создании кошелька (рис. 5).
-                        <hr>
-                    </p>
 
-                    <div class="card-deck">
-
-                        <div class="card">
-                            <img src="source/eclair/light.png" class="card-img">
-                            <div class="card-footer">
-                                <p class="card-text" style="text-align: center;"> <hr>  Lightning Network</p>
-                            </div>
-                        </div>
-                
                         <div class="card">
                             <img src="source/eclair/screen4.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 4</p>
+                                <div class='  text-center'>Рис 4</div>
                             </div>
                         </div>
-                            
+
                         <div class="card">
                             <img src="source/eclair/screen5.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 5</p>
+                                <div class='  text-center'>Рис 5</div>
                             </div>
                         </div>
 
@@ -134,40 +127,46 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <h1 id="app_start"> <b>Меню</b></h1>
-                    <p> В правом верхнем углу экрана расположена кнопка <i>«Еще»</i> , по нажатии на которую открывается 
-                        выпадающее меню (рис. 6) с кпопками "Network Info"(«Информация о сети»), "Settings"(«Настройки»), "About/Help"(«Помощь»), по нажатии на которые открываются соответсвующие окна.
+                    <p> В правом верхнем углу экрана расположена кнопка <i>«Еще»</i> , по нажатии на которую открывается
+                        выпадающее меню (рис. 6) с кпопками "Network Info"(«Информация о сети»),
+                        "Settings"(«Настройки»), "About/Help"(«Помощь»), по нажатии на которые открываются
+                        соответсвующие окна.
                         <hr>
-                        В окне "Network Info"(«Информация о сети») содержатся сведения о вашей Bitcoin сети, Lightning сети и ключ, 
+                        В окне "Network Info"(«Информация о сети») содержатся сведения о вашей Bitcoin сети, Lightning
+                        сети и ключ,
                         позволяющий генерировать адреса. (рис. 7)
                         <hr>
-                        Окно "Settings"(«Настройки») предоставляет возможность изменить URL проводника, вкл/выкл тактильную обратную связь при вводе PIN-а, выбрать отображаемую валюту
-                        и криптовалюту, количество отображаемых цифр после запятой, вкл/выкл защиту Lightning транзакций и вкл/выкл возможность Lightning транзакций. (рис. 8)
+                        Окно "Settings"(«Настройки») предоставляет возможность изменить URL проводника, вкл/выкл
+                        тактильную обратную связь при вводе PIN-а, выбрать отображаемую валюту
+                        и криптовалюту, количество отображаемых цифр после запятой, вкл/выкл защиту Lightning транзакций
+                        и вкл/выкл возможность Lightning транзакций. (рис. 8)
                         <hr>
-                         В окне "About/Help"(«Помощь») содержатся сведения о приложении и полезные ссылки <a href="https://github.com/ACINQ/eclair-mobile">github репозиторий</a>. (рис. 9) 
+                        В окне "About/Help"(«Помощь») содержатся сведения о кошельке и полезные ссылки <a
+                            href="https://github.com/ACINQ/eclair-mobile">github репозиторий</a>. (рис. 9)
                     </p>
-                    <div class="card-deck" > 
+                    <div class="card-deck">
                         <div class="card">
                             <img src="source/eclair/screen6.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 6</p>
+                                <div class='  text-center'>Рис 6</div>
                             </div>
                         </div>
                         <div class="card">
                             <img src="source/eclair/screen7.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 7</p>
+                                <div class='  text-center'>Рис 7</div>
                             </div>
                         </div>
                         <div class="card">
                             <img src="source/eclair/screen8.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 8</p>
+                                <div class='  text-center'>Рис 8</div>
                             </div>
                         </div>
                         <div class="card">
                             <img src="source/eclair/screen9.png" class="card-img">
                             <div class="card-footer">
-                                <p class="card-text" style="text-align: center;">Рис 9</p>
+                                <div class='  text-center'>Рис 9</div>
                             </div>
                         </div>
                     </div>
