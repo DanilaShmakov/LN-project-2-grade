@@ -51,15 +51,25 @@
             <div class="card-header text-center">Инструкция для запуска и работы C-lightning на Linux</div>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <p>Работа ноды на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН,
+                    <p>Работа с нодой на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН,
                         так как потраченные силы не будут стоить результата. Гораздо легче пользоваться мобильным
                         приложением, некоторые из которых мы тоже рассмотрим.
                         Но если вы знаете зачем вам это нужно, то специально для вас
                         наша команда решила разобраться в этом деле и установить одну из популярных реализаций ЛН ноды
                         "C-lightning".</p>
+                    <p>
+                        Так же мы оставим вам QR-код для подключения к ноде 
+                        (QR для перевода не оставим, потому что не можем принимать средства). 
+                        Подключиться к ноде и создать канал можно с помощью <a href="apps.html">приложения</a>. </p>
+                        <div class="card-group">                          
+                            <div class="card">
+                                <img src="source/qr-node.png" alt="" class="card-img" style='width:300px'>
+                            </div>
+                        </div>
+                   
                 </li>
                 <li class="list-group-item">
-                    <p> Для работы с c-lightning нужно установить и запустить bitcoind:</p>
+                    <p>Итак, начнём! Для работы с c-lightning нужно установить и запустить bitcoind:</p>
                     <ul class="list-unstyled">
                         <li class="pl-4"><b>$ sudo apt-get install build-essential</b></li>
                         <li class="pl-4"><b>$ sudo apt-get install libtool autotools-dev autoconf</b></li>
@@ -184,22 +194,37 @@
             <li class="list-group-item">
                 <p>Для того, чтобы принять перевод, нужно ввести команду:
                     <ul class="list-unstyled">
-                        <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>
-                        <li class="pl-4">сюда скрин вывода после invoice</li>
+                        <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>     
+                       
                     </ul>
                     Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши
                     (0.001 сатоши)
+                </p>
+                <p>
+                    <div class="card">
+                        <img src="source/invoice.png" alt="" class="card-img">
+                        <div class="card-footer">
+                                У нас пока что не получилось создать канал так, чтобы он мог отправлять и принимать платежи, 
+                                поэтому у нас в последней стороке вывода команды отображается ошибка
+                        </div>
+                    </div>
                 </p>
             </li>
             <li class="list-group-item">
                 <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту команду:
                     <ul class="list-unstyled">
                         <li class="pl-4"> <b>$ lightning-cli close "node_id"</b> </li>
-                        <li class="pl-4">сюда скрин </li>
-                    </ul>
-                    Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши
-                    (0.001 сатоши)
-                </p>
+                        </ul>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="source/close_ch.png" alt="" class="card-img" style='height:250px'>
+                                <div class="card-footer text-center">Закрытие канала и getinfo после закрытия</div>
+                            </div>
+                            <div class="card">
+                                <img src="source/ch_closed.png" alt="" class="card-img" style='height:250px'>
+                                <div class="card-footer text-center">Вывод listpeers после закрытия</div>
+                            </div>
+                        </div>
             </li>
             </ul>
         </div>
