@@ -1,221 +1,236 @@
-<html lang="ru">
+<<<<<<< HEAD <html lang="ru">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>
-        Установка ноды
-    </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="main/css.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            Установка ноды
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="main/css.css">
+    </head>
 
-<body>
-    <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-md">
-        <a href="index.html" class="navbar-brand pl-5">
-            <img src="source/lightning_PNG52.png" class="hover" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Домой</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">Об LN</a>
-                </li>
-                <li class="nav-item">
-                    <a href="download.html" class="nav-link active">Установка ноды</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="apps.html" class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Обзор приложений</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown">
-                        <a class="dropdown-item" href="apps.html">Eclair Mobile</a>
-                        <a class="dropdown-item" href="applications.html">Blue Wallet</a>
-                        <a class="dropdown-item" href="comparsion.html">Таблица-описание</a>
-                    </div>
-                </li>
-            </ul>
+    <body>
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-md">
+            <a href="index.html" class="navbar-brand pl-5">
+                <img src="source/lightning_PNG52.png" class="hover" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Домой</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Об LN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="download.html" class="nav-link active">Установка ноды</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="apps.html" class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Обзор приложений</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item" href="apps.html">Eclair Mobile</a>
+                            <a class="dropdown-item" href="applications.html">Blue Wallet</a>
+                            <a class="dropdown-item" href="comparsion.html">Таблица-описание</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <div class="container text-light">
+                <h1>Установка ноды</h1>
+            </div>
         </div>
-    </nav>
-    <div class="jumbotron">
-        <div class="container text-light">
-            <h1>Установка ноды</h1>
-        </div>
-    </div>
-    <div class="container">
-        <div class="card">
-            <div class="card-header text-center">Инструкция для запуска и работы C-lightning на Linux</div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <p>Работа с нодой на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН,
-                        так как потраченные силы не будут стоить результата. Гораздо легче пользоваться мобильным
-                        приложением, некоторые из которых мы тоже рассмотрим.
-                        Но если вы знаете зачем вам это нужно, то специально для вас
-                        наша команда решила разобраться в этом деле и установить одну из популярных реализаций ЛН ноды
-                        "C-lightning".</p>
-                    <p>
-                        Так же мы оставим вам QR-код для подключения к ноде 
-                        (QR для перевода не оставим, потому что не можем принимать средства). 
-                        Подключиться к ноде и создать канал можно с помощью <a href="apps.html">приложения</a>. </p>
-                        <div class="card-group">                          
+        <div class="container">
+            <div class="card">
+                <div class="card-header text-center">Инструкция для запуска и работы C-lightning на Linux</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <p>Работа с нодой на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН,
+                            так как потраченные силы не будут стоить результата. Гораздо легче пользоваться мобильным
+                            приложением, некоторые из которых мы тоже рассмотрим.
+                            Но если вы знаете зачем вам это нужно, то специально для вас
+                            наша команда решила разобраться в этом деле и установить одну из популярных реализаций ЛН
+                            ноды
+                            "C-lightning".</p>
+                        <p>
+                            Так же мы оставим вам QR-код для подключения к ноде
+                            (QR для перевода не оставим, потому что не можем принимать средства).
+                            Подключиться к ноде и создать канал можно с помощью <a href="apps.html">приложения</a>. </p>
+                        <div class="card-group">
                             <div class="card">
                                 <img src="source/qr-node.png" alt="" class="card-img" style='width:300px'>
                             </div>
                         </div>
-                   
-                </li>
-                <li class="list-group-item">
-                    <p>Итак, начнём! Для работы с c-lightning нужно установить и запустить bitcoind:</p>
-                    <ul class="list-unstyled">
-                        <li class="pl-4"><b>$ sudo apt-get install build-essential</b></li>
-                        <li class="pl-4"><b>$ sudo apt-get install libtool autotools-dev autoconf</b></li>
-                        <li class="pl-4"><b>$ sudo apt-get install libssl-dev</b></li>
-                        <li class="pl-4"><b>$ sudo apt-get install libboost-all-dev</b></li>
-                        <li class="pl-4"><b>$ sudo add-apt-repository ppa:bitcoin/bitcoin</b></li>
-                        <li class="pl-4"><b>$ sudo apt-get update</b></li>
-                        <li class="pl-4"><b>$ sudo apt-get install bitcoind</b></li>
-                        <li class="pl-4"><b>$ mkdir ~/.bitcoin/ && cd ~/.bitcoin/</b></li>
-                        <li class="pl-4"><b>$ nano bitcoind.conf</b></li>
-                    </ul>
-                </li>
-                <li class="list-group-item">
-                    <p>Записываем в файл bitcoind.conf:</p>
-                    <ul class="list-unstyled">
-                        <li class="pl-4">rpcuser=username</li>
-                        <li class="pl-4">rpcpassword=password</li>
-                        <li class="pl-4">testnet=0</li>
-                        <li class="pl-4">rpcport=8332</li>
-                        <li class="pl-4">rpcallowip=127.0.0.1</li>
-                        <li class="pl-4">rpcallowip=195.154.11.93</li>
-                        <li class="pl-4">server=1</li>
-                        <li class="pl-4">prune=550</li>
-                    </ul>
-                    <p>Последняя строка нужна для запуска в сокращенном виде. Однако из-за неё могут возникнуть
-                        конфликты так как
-                        c-lightning поддерживает работу в этом режиме частично</p>
-                </li>
-                <li class="list-group-item">
-                    <p>Можно запускать биткоин узел. При запуске он будет синхронизироватся с сетью
-                        скачивая новые блоки и отбрасывая ненужные. У нас это заняло 2 дня и 8 гигабайт места</p>
-                    <p>После того, как все блоки скачаются можно устанавливать c-lightning:
-                    </p>
-                    <ul class="list-unstyled">
-                        <li class="pl-4"><b>$ sudo apt-get install -y software-properties-common</b></li>
-                        <li class="pl-4"><b>$ sudo add-apt-repository -u ppa:lightningnetwork/ppa</b></li>
-                        <li class="pl-4"><b>$ sudo apt-get install lightningd</b></li>
-                    </ul>
-                </li>
-                <li class="list-group-item">
-                    <p>Далее один раз вводим следующие команды для правильного создания папки .lightning в домашней
-                        директории:</p>
-                    <ul class="list-unstyled">
-                        <li class="pl-4"><b>$ lightningd --network=bitcoin --log-level=debug</b></li>
-                        <li class="pl-4">нажимаем ctrl+z и убиваем процесс lightningd</li>
-                        <li class="pl-4"><b>$ nano ~/.lightning/config</b></li>
-                    </ul>
-                </li>
-                <li class="list-group-item">
-                    <p>Записываем в файл config:</p>
-                    <ul class="list-unstyled">
-                        <li class="pl-4">network=bitcoin</li>
-                        <li class="pl-4">log-level=debug</li>
-                        <li class="pl-4">addr=0.0.0.0:9735</li>
-                        <li class="pl-4">bitcoin-rpcuser=username_as_bitcoin_rpc</li>
-                        <li class="pl-4">bitcoin-rpcpassword=password_as_bitcoin_rpc</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">
-                    <p>После того как всё скачается, для запуска и проверки состояния lightningd и bitcoind используются
-                        следующие команды:</p>
-                    <ul class="list-unstyled">
-                        <li class="pl-4">Запустить биткоин узел: <b>$ bitcoind -daemon</b></li>
-                        <li class="pl-4">Выключить биткоин узел: <b>$ bitcoin-cli stop</b></li>
-                        <li class="pl-4">Вывод информации о биткоин узле: <b>$ bitcoin-cli getblockchaininfo</b></li>
-                        <li class="pl-4">Включить ЛН ноду: <b>$ lightningd --daemon</b></li>
-                        <li class="pl-4">Вывести информацию о ней: <b>$ lightning-cli getinfo</b></li>
-                        <li class="pl-4">Выключить ЛН ноду: <b>$ lightning-cli getinfo</b></li>
-                        <div class="card-group">
-                            <div class="card">
-                                <img src="source/start.png" alt="" class="card-img" style='height:200px'>
+
+                    </li>
+                    <li class="list-group-item">
+                        <p>Итак, начнём! Для работы с c-lightning нужно установить и запустить bitcoind:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4"><b>$ sudo apt-get install build-essential</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install libtool autotools-dev autoconf</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install libssl-dev</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install libboost-all-dev</b></li>
+                            <li class="pl-4"><b>$ sudo add-apt-repository ppa:bitcoin/bitcoin</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get update</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install bitcoind</b></li>
+                            <li class="pl-4"><b>$ mkdir ~/.bitcoin/ && cd ~/.bitcoin/</b></li>
+                            <li class="pl-4"><b>$ nano bitcoind.conf</b></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Записываем в файл bitcoind.conf:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4">rpcuser=username</li>
+                            <li class="pl-4">rpcpassword=password</li>
+                            <li class="pl-4">testnet=0</li>
+                            <li class="pl-4">rpcport=8332</li>
+                            <li class="pl-4">rpcallowip=127.0.0.1</li>
+                            <li class="pl-4">rpcallowip=195.154.11.93</li>
+                            <li class="pl-4">server=1</li>
+                            <li class="pl-4">prune=550</li>
+                        </ul>
+                        <p>Последняя строка нужна для запуска в сокращенном виде. Однако из-за неё могут возникнуть
+                            конфликты так как
+                            c-lightning поддерживает работу в этом режиме частично</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Можно запускать биткоин узел. При запуске он будет синхронизироватся с сетью
+                            скачивая новые блоки и отбрасывая ненужные. У нас это заняло 2 дня и 8 гигабайт места</p>
+                        <p>После того, как все блоки скачаются можно устанавливать c-lightning:
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4"><b>$ sudo apt-get install -y software-properties-common</b></li>
+                            <li class="pl-4"><b>$ sudo add-apt-repository -u ppa:lightningnetwork/ppa</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install lightningd</b></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Далее один раз вводим следующие команды для правильного создания папки .lightning в домашней
+                            директории:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4"><b>$ lightningd --network=bitcoin --log-level=debug</b></li>
+                            <li class="pl-4">нажимаем ctrl+z и убиваем процесс lightningd</li>
+                            <li class="pl-4"><b>$ nano ~/.lightning/config</b></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Записываем в файл config:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4">network=bitcoin</li>
+                            <li class="pl-4">log-level=debug</li>
+                            <li class="pl-4">addr=0.0.0.0:9735</li>
+                            <li class="pl-4">bitcoin-rpcuser=username_as_bitcoin_rpc</li>
+                            <li class="pl-4">bitcoin-rpcpassword=password_as_bitcoin_rpc</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>После того как всё скачается, для запуска и проверки состояния lightningd и bitcoind
+                            используются
+                            следующие команды:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4">Запустить биткоин узел: <b>$ bitcoind -daemon</b></li>
+                            <li class="pl-4">Выключить биткоин узел: <b>$ bitcoin-cli stop</b></li>
+                            <li class="pl-4">Вывод информации о биткоин узле: <b>$ bitcoin-cli getblockchaininfo</b>
+                            </li>
+                            <li class="pl-4">Включить ЛН ноду: <b>$ lightningd --daemon</b></li>
+                            <li class="pl-4">Вывести информацию о ней: <b>$ lightning-cli getinfo</b></li>
+                            <li class="pl-4">Выключить ЛН ноду: <b>$ lightning-cli getinfo</b></li>
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="source/start.png" alt="" class="card-img" style='height:200px'>
+                                </div>
+                                <div class="card">
+                                    <img src="source/getinfo.png" alt="" class="card-img" style='height:200px'>
+                                </div>
+                                <div class="card">
+                                    <img src="source/getblockchaininfo.png" alt="" class="card-img"
+                                        style='height:200px'>
+                                </div>
                             </div>
-                            <div class="card">
-                                <img src="source/getinfo.png" alt="" class="card-img" style='height:200px'>
-                            </div>
-                            <div class="card">
-                                <img src="source/getblockchaininfo.png" alt="" class="card-img" style='height:200px'>
-                            </div>
+                            <p>Так же пригодится команда <b>$ lightning-cli help</b> и <b>$ lightning-cli help
+                                    "command"</b>
+                                для того чтобы узнать для чего нужны те или иные команды </p>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Вот мы и установили всё необходимое, однако не получится принимать и отправлять LN bitcoin
+                            без
+                            канала. Также необходимо открыть порты 9735 и 8333, чтобы нода была видна другим.
+                            Чтобы создать канал нужно сделать следующее:
+                            <ul class="list-unstyled">
+                                <li class="pl-4">1) Подключиться к другому узлу для синхронизации графа канала. Их можно
+                                    найти на <a href="https://1ml.com/">1ML</a>.</li>
+                                <li class="pl-4">2) Сгенерировать адрес и отправить на него несколько биткойнов.
+                                    Используйте <b>$
+                                        lightning-cli listfunds.</b> для проверки. </li>
+                                <li class="pl-4">3) Открыть канал с узлом, к которому вы подключились в первом шаге.
+                                </li>
+                            </ul>
+                        </p>
+                        <p>Соответствующие команды:
+                            <ul class="list-unstyled">
+                                <li class="pl-4">1) <b>$ lightning-cli connect "node_id@ip:port"</b> </li>
+                                <li class="pl-4">2) <b>$ lightning-cli newaddr p2sh-segwit</b></li>
+                                <li class="pl-4">3) <b>$ lightning-cli fundchannel "node_id" "amount_in_satoshis"</b>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>Чтобы проверить состояние канала используйте команды:
+                            <ul class="list-unstyled">
+                                <li class="pl-4"> <b>$ lightning-cli listpeers</b></li>
+                                <li class="pl-4"> <b>$ lightning-cli listchannels "short-id"</b></li>
+                            </ul>
+                            Должно быть так, что state: CHANNELD_NORMAL, public: true. Если всё получилось,
+                            то теперь к ноде можно подключаться с мобильных кошельков и создавать с ней канал.
+                        </p>
+                    <li class="list-group-item">
+                        <p>Для того, чтобы сделать перевод, нужно ввести команду:
+                            <ul class="list-unstyled">
+                                <li class="pl-4"> <b>$ lightning-cli pay "invoice"</b> </li>
+                        </p>
+                        <p>Если платёж не дошёл используйте <b>$ lightning-cli paystatus "invoice"</b> чтобы понять в
+                            чём
+                            ошибка </p>
+                    <li>
+                        <div class="card">
+                            <img src="source/pay_complete.png" alt="" class="card-img">
                         </div>
-                        <p>Так же пригодится команда <b>$ lightning-cli help</b> и <b>$ lightning-cli help "command"</b>
-                            для того чтобы узнать для чего нужны те или иные команды </p>
-                    </ul>
+                    </li>
+                </ul>
                 </li>
                 <li class="list-group-item">
-                    <p>Вот мы и установили всё необходимое, однако не получится принимать и отправлять LN bitcoin без
-                        канала. Также необходимо открыть порты 9735 и 8333, чтобы нода была видна другим.
-                        Чтобы создать канал нужно сделать следующее:
-						<ul class="list-unstyled">
-                        <li class="pl-4">1) Подключиться к другому узлу для синхронизации графа канала. Их можно найти на <a
-                            href="https://1ml.com/">1ML</a>.</li>
-                        <li class="pl-4">2) Сгенерировать адрес и отправить на него несколько биткойнов. Используйте <b>$
-                            lightning-cli listfunds.</b> для проверки. </li>
-                        <li class="pl-4">3) Открыть канал с узлом, к которому вы подключились в первом шаге.</li></ul></p>
-                    <p>Соответствующие команды:
+                    <p>Для того, чтобы принять перевод, нужно ввести команду:
                         <ul class="list-unstyled">
-                            <li class="pl-4">1) <b>$ lightning-cli connect "node_id@ip:port"</b> </li>
-                            <li class="pl-4">2) <b>$ lightning-cli newaddr p2sh-segwit</b></li>
-                            <li class="pl-4">3) <b>$ lightning-cli fundchannel "node_id" "amount_in_satoshis"</b> </li>
+                            <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>
+
                         </ul>
+                        Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в
+                        милисатоши
+                        (0.001 сатоши)
                     </p>
-                    <p>Чтобы проверить состояние канала используйте команды:
-                        <ul class="list-unstyled">
-                            <li class="pl-4"> <b>$ lightning-cli listpeers</b></li>
-                            <li class="pl-4"> <b>$ lightning-cli listchannels "short-id"</b></li>
-                        </ul>
-                        Должно быть так, что state: CHANNELD_NORMAL, public: true. Если всё получилось,
-                        то теперь к ноде можно подключаться с мобильных кошельков и создавать с ней канал.
-                    </p>
-                <li class="list-group-item">
-                    <p>Для того, чтобы сделать перевод, нужно ввести команду:
-                        <ul class="list-unstyled">
-                            <li class="pl-4"> <b>$ lightning-cli pay "invoice"</b> </li>
-                    </p>
-                    <p>Если платёж не дошёл используйте <b>$ lightning-cli paystatus "invoice"</b> чтобы понять в чём
-                        ошибка </p>
-                <li>
-                    <div class="card">
-                        <img src="source/pay_complete.png" alt="" class="card-img">
-                    </div>
-                </li>
-            </ul>
-            </li>
-            <li class="list-group-item">
-                <p>Для того, чтобы принять перевод, нужно ввести команду:
-                    <ul class="list-unstyled">
-                        <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>     
-                       
-                    </ul>
-                    Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в милисатоши
-                    (0.001 сатоши)
-                </p>
-                <p>
-                    <div class="card">
-                        <img src="source/invoice.png" alt="" class="card-img">
-                        <div class="card-footer">
-                                У нас пока что не получилось создать канал так, чтобы он мог отправлять и принимать платежи, 
+                    <p>
+                        <div class="card">
+                            <img src="source/invoice.png" alt="" class="card-img">
+                            <div class="card-footer">
+                                У нас пока что не получилось создать канал так, чтобы он мог отправлять и принимать
+                                платежи,
                                 поэтому у нас в последней стороке вывода команды отображается ошибка
+                            </div>
                         </div>
-                    </div>
-                </p>
-            </li>
-            <li class="list-group-item">
-                <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту команду:
-                    <ul class="list-unstyled">
-                        <li class="pl-4"> <b>$ lightning-cli close "node_id"</b> </li>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту
+                        команду:
+                        <ul class="list-unstyled">
+                            <li class="pl-4"> <b>$ lightning-cli close "node_id"</b> </li>
                         </ul>
                         <div class="card-group">
                             <div class="card">
@@ -227,25 +242,293 @@
                                 <div class="card-footer text-center">Вывод listpeers после закрытия</div>
                             </div>
                         </div>
-            </li>
-            </ul>
+                </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <br><br>
-    <footer class="footer fixed-bottom py-3 bg-dark text-white-50">
-        <div class="container text-center">
-            <small>Copyright &copy; 181-351 LN Project</small>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
+        <br><br>
+        <footer class="footer fixed-bottom py-3 bg-dark text-white-50">
+            <div class="container text-center">
+                <small>Copyright &copy; 181-351 LN Project</small>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
 
-</html>
+    </html>
+    =======
+    <html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            Установка ноды
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="main/css.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-md">
+            <a href="index.html" class="navbar-brand pl-5">
+                <img src="source/lightning_PNG52.png" class="hover" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Домой</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Об LN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="download.html" class="nav-link active">Установка ноды</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="apps.html" class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Обзор приложений</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item" href="apps.html">Eclair Mobile</a>
+                            <a class="dropdown-item" href="applications.html">Blue Wallet</a>
+                            <a class="dropdown-item" href="comparsion.html">Таблица-описание</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <div class="container text-light">
+                <h1>Установка ноды</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-header text-center">Инструкция для запуска и работы C-lightning на Linux</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <p>Работа с нодой на Linux это <b>абсолютно ненужное занятие</b> для новичка в сфере ЛН,
+                            так как потраченные силы не будут стоить результата. Гораздо легче пользоваться мобильным
+                            приложением, некоторые из которых мы тоже рассмотрим.
+                            Но если вы знаете зачем вам это нужно, то специально для вас
+                            наша команда решила разобраться в этом деле и установить одну из популярных реализаций ЛН
+                            ноды
+                            "C-lightning".</p>
+                        <p>
+                            Так же мы оставим вам QR-код для подключения к ноде
+                            (QR для перевода не оставим, потому что не можем принимать средства).
+                            Подключиться к ноде и создать канал можно с помощью <a href="apps.html">приложения</a>. </p>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="source/qr-node.png" alt="" class="card-img" style='width:300px'>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item">
+                        <p>Итак, начнём! Для работы с c-lightning нужно установить и запустить bitcoind:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4"><b>$ sudo apt-get install build-essential</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install libtool autotools-dev autoconf</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install libssl-dev</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install libboost-all-dev</b></li>
+                            <li class="pl-4"><b>$ sudo add-apt-repository ppa:bitcoin/bitcoin</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get update</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install bitcoind</b></li>
+                            <li class="pl-4"><b>$ mkdir ~/.bitcoin/ && cd ~/.bitcoin/</b></li>
+                            <li class="pl-4"><b>$ nano bitcoind.conf</b></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Записываем в файл bitcoind.conf:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4">rpcuser=username</li>
+                            <li class="pl-4">rpcpassword=password</li>
+                            <li class="pl-4">testnet=0</li>
+                            <li class="pl-4">rpcport=8332</li>
+                            <li class="pl-4">rpcallowip=127.0.0.1</li>
+                            <li class="pl-4">rpcallowip=195.154.11.93</li>
+                            <li class="pl-4">server=1</li>
+                            <li class="pl-4">prune=550</li>
+                        </ul>
+                        <p>Последняя строка нужна для запуска в сокращенном виде. Однако из-за неё могут возникнуть
+                            конфликты так как
+                            c-lightning поддерживает работу в этом режиме частично</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Можно запускать биткоин узел. При запуске он будет синхронизироватся с сетью
+                            скачивая новые блоки и отбрасывая ненужные. У нас это заняло 2 дня и 8 гигабайт места</p>
+                        <p>После того, как все блоки скачаются можно устанавливать c-lightning:
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4"><b>$ sudo apt-get install -y software-properties-common</b></li>
+                            <li class="pl-4"><b>$ sudo add-apt-repository -u ppa:lightningnetwork/ppa</b></li>
+                            <li class="pl-4"><b>$ sudo apt-get install lightningd</b></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Далее один раз вводим следующие команды для правильного создания папки .lightning в домашней
+                            директории:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4"><b>$ lightningd --network=bitcoin --log-level=debug</b></li>
+                            <li class="pl-4">нажимаем ctrl+z и убиваем процесс lightningd</li>
+                            <li class="pl-4"><b>$ nano ~/.lightning/config</b></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Записываем в файл config:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4">network=bitcoin</li>
+                            <li class="pl-4">log-level=debug</li>
+                            <li class="pl-4">addr=0.0.0.0:9735</li>
+                            <li class="pl-4">bitcoin-rpcuser=username_as_bitcoin_rpc</li>
+                            <li class="pl-4">bitcoin-rpcpassword=password_as_bitcoin_rpc</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>После того как всё скачается, для запуска и проверки состояния lightningd и bitcoind
+                            используются
+                            следующие команды:</p>
+                        <ul class="list-unstyled">
+                            <li class="pl-4">Запустить биткоин узел: <b>$ bitcoind -daemon</b></li>
+                            <li class="pl-4">Выключить биткоин узел: <b>$ bitcoin-cli stop</b></li>
+                            <li class="pl-4">Вывод информации о биткоин узле: <b>$ bitcoin-cli getblockchaininfo</b>
+                            </li>
+                            <li class="pl-4">Включить ЛН ноду: <b>$ lightningd --daemon</b></li>
+                            <li class="pl-4">Вывести информацию о ней: <b>$ lightning-cli getinfo</b></li>
+                            <li class="pl-4">Выключить ЛН ноду: <b>$ lightning-cli getinfo</b></li>
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="source/start.png" alt="" class="card-img" style='height:200px'>
+                                </div>
+                                <div class="card">
+                                    <img src="source/getinfo.png" alt="" class="card-img" style='height:200px'>
+                                </div>
+                                <div class="card">
+                                    <img src="source/getblockchaininfo.png" alt="" class="card-img"
+                                        style='height:200px'>
+                                </div>
+                            </div>
+                            <p>Так же пригодится команда <b>$ lightning-cli help</b> и <b>$ lightning-cli help
+                                    "command"</b>
+                                для того чтобы узнать для чего нужны те или иные команды </p>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <p>Вот мы и установили всё необходимое, однако не получится принимать и отправлять LN bitcoin
+                            без
+                            канала. Также необходимо открыть порты 9735 и 8333, чтобы нода была видна другим.
+                            Чтобы создать канал нужно сделать следующее:
+                            <ul class="list-unstyled">
+                                <li class="pl-4">1) Подключиться к другому узлу для синхронизации графа канала. Их можно
+                                    найти на <a href="https://1ml.com/">1ML</a>.</li>
+                                <li class="pl-4">2) Сгенерировать адрес и отправить на него несколько биткойнов.
+                                    Используйте <b>$
+                                        lightning-cli listfunds.</b> для проверки. </li>
+                                <li class="pl-4">3) Открыть канал с узлом, к которому вы подключились в первом шаге.
+                                </li>
+                            </ul>
+                        </p>
+                        <p>Соответствующие команды:
+                            <ul class="list-unstyled">
+                                <li class="pl-4">1) <b>$ lightning-cli connect "node_id@ip:port"</b> </li>
+                                <li class="pl-4">2) <b>$ lightning-cli newaddr p2sh-segwit</b></li>
+                                <li class="pl-4">3) <b>$ lightning-cli fundchannel "node_id" "amount_in_satoshis"</b>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>Чтобы проверить состояние канала используйте команды:
+                            <ul class="list-unstyled">
+                                <li class="pl-4"> <b>$ lightning-cli listpeers</b></li>
+                                <li class="pl-4"> <b>$ lightning-cli listchannels "short-id"</b></li>
+                            </ul>
+                            Должно быть так, что state: CHANNELD_NORMAL, public: true. Если всё получилось,
+                            то теперь к ноде можно подключаться с мобильных кошельков и создавать с ней канал.
+                        </p>
+                    <li class="list-group-item">
+                        <p>Для того, чтобы сделать перевод, нужно ввести команду:
+                            <ul class="list-unstyled">
+                                <li class="pl-4"> <b>$ lightning-cli pay "invoice"</b> </li>
+                        </p>
+                        <p>Если платёж не дошёл используйте <b>$ lightning-cli paystatus "invoice"</b> чтобы понять в
+                            чём
+                            ошибка </p>
+                    <li>
+                        <div class="card">
+                            <img src="source/pay_complete.png" alt="" class="card-img">
+                        </div>
+                    </li>
+                </ul>
+                </li>
+                <li class="list-group-item">
+                    <p>Для того, чтобы принять перевод, нужно ввести команду:
+                        <ul class="list-unstyled">
+                            <li class="pl-4"> <b>$ lightning-cli invoice "amount" "label" "description>"</b> </li>
+
+                        </ul>
+                        Эта команда вернёт строку, которая нужна для отправителя, чтобы перевести вам "amount" в
+                        милисатоши
+                        (0.001 сатоши)
+                    </p>
+                    <p>
+                        <div class="card">
+                            <img src="source/invoice.png" alt="" class="card-img">
+                            <div class="card-footer">
+                                У нас пока что не получилось создать канал так, чтобы он мог отправлять и принимать
+                                платежи,
+                                поэтому у нас в последней стороке вывода команды отображается ошибка
+                            </div>
+                        </div>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p>Если нужно закрыть канал и сохранить сумму на нём за исключением комиссии используйте эту
+                        команду:
+                        <ul class="list-unstyled">
+                            <li class="pl-4"> <b>$ lightning-cli close "node_id"</b> </li>
+                        </ul>
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="source/close_ch.png" alt="" class="card-img" style='height:250px'>
+                                <div class="card-footer text-center">Закрытие канала и getinfo после закрытия</div>
+                            </div>
+                            <div class="card">
+                                <img src="source/ch_closed.png" alt="" class="card-img" style='height:250px'>
+                                <div class="card-footer text-center">Вывод listpeers после закрытия</div>
+                            </div>
+                        </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <footer class="footer fixed-bottom py-3 bg-dark text-white-50">
+            <div class="container text-center">
+                <small>Copyright &copy; 181-351 LN Project</small>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+    </html>
+    >>>>>>> f282c3ef1b46b73d942c032ab331554e3e95a5f1
